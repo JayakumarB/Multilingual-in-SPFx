@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "manifest-loc-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/manifestLoc/ManifestLocWebPart.js",
+          "manifest": "./src/webparts/manifestLoc/ManifestLocWebPart.manifest.json"
+        }
+      ]
+    },
+    "localized-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/localized/LocalizedWebPart.js",
+          "manifest": "./src/webparts/localized/LocalizedWebPart.manifest.json"
+        }
+      ]
+    },
+    "hello-world-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
+          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ManifestLocWebPartStrings": "lib/webparts/manifestLoc/loc/{locale}.js",
+    "LocalizedWebPartStrings": "lib/webparts/localized/loc/{locale}.js",
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+  }
+}
